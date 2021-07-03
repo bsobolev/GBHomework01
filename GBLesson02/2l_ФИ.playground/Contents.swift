@@ -2,7 +2,7 @@ import UIKit
 
 // Задание 1
 
-let chislo = 12
+let chislo = 13
 
 func chetNeChet() {
     let ostatok = chislo % 2
@@ -19,5 +19,26 @@ func bezOstatkaNaTri() {
     
 }
 
-
 bezOstatkaNaTri()
+
+// Задание 3
+
+var myArray: [Int] = []
+for i in 0...99 {
+    myArray.append(i)
+}
+
+// Задание 4
+for value in myArray {
+    if (value % 2) == 0 {
+        myArray.remove(at: myArray.firstIndex(of: value)!)
+    }
+}
+
+for value in myArray {
+    if (value % 3) != 0 {
+        myArray.remove(at: myArray.firstIndex(of: value)!)
+    }
+}
+
+print(myArray)
